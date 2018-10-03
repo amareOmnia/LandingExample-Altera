@@ -1,0 +1,64 @@
+.input {
+  &__container {
+    max-width: 478px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-width: 725px) {
+      max-width: 920px;
+    }
+  }
+
+  &__box {
+    margin-left: 0;
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+  }
+
+  &__box2 {
+    width: 140px;
+    margin: 0 20px 0 0;
+  }
+
+  &__box3 {
+    width: 65%;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    margin: auto;
+    @media (max-width: 725px) {
+      padding-top: 40px;
+    }
+  }
+
+  &__form {
+    border: none;
+    border-bottom: 1px solid grey;
+    width: 100%;
+  }
+
+  &__form-font {
+    @extend .text__thick;
+    font-family: "Franklin Gothic Medium";
+    font-size: 12px;
+    height: 20px;
+    color: #434343;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+  }
+
+  &__form-textarea {
+    font-size: 100%;
+    height: 80px;
+    width: 98%;
+    padding-bottom: 0.4em;
+    padding-right: 0.4em;
+    border: 1px solid #434343;
+  }
+
+  &__form-comments-chunk {
+    text-align: left;
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "state-bank",
+  "version": "1.0.0",
+  "description": "State Bank Website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/themorrisonagency/state-bank.git"
+  },
+  "author": "Morrison Agency",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-inline-css": "^3.3.0",
+    "gulp-inline-source": "^3.1.0",
+    "gulp-less": "^3.4.0",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "less-plugin-autoprefix": "^1.5.1",
+    "path": "^0.12.7",
+    "sass-module-importer": "^1.4.0"
+  },
+  "dependencies": {
+    "mappy-breakpoints": "^0.2.3",
+    "normalize.css": "^8.0.0"
+  }
+}

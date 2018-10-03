@@ -1,0 +1,297 @@
+/* Global+Page Styles */
+* {
+  font-family: "Raleway" !important;
+  font-weight: 200;
+  margin: auto;
+  /* background-color: grey; */
+  /* serious problems with resizing browser and keeping absolute positions correct */
+  /* https://stackoverflow.com/questions/107936/how-to-add-some-non-standard-font-to-a-website#107951 */ }
+
+@font-face {
+  font-family: "Raleway" !important;
+  src: url("/_assets/fonts/Raleway-Regular.ttf") format("truetype"); }
+
+/* font-face is not actually doing anything here */
+.background__blue {
+  background-color: #eaf7fb;
+  background-size: cover;
+  width: 100%; }
+
+.background__img {
+  background: url("/assets/images/male.jpg");
+  background-size: cover;
+  position: relative;
+  padding-bottom: 200px;
+  max-width: 1366px;
+  width: 100%; }
+
+.background__slide1 {
+  background: url("/_assets/images/male.jpg");
+  background-position: center;
+  max-width: 1366px; }
+
+.background__slide2 {
+  background: url("https://picsum.photos/1366/556");
+  background-position: center;
+  max-width: 1366px; }
+
+.background__slide3 {
+  background: url("https://picsum.photos/1366/556");
+  background-position: center;
+  max-width: 1366px; }
+
+/* can't figure out how to center the page when there's absolute positioning (text on images).
+      any attempt fucks formatting when reducing width of browser...*/
+/* Link Styles */
+.link__camo {
+  text-decoration: none;
+  color: inherit; }
+
+.link__button {
+  background-color: #d16319;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 1.2px;
+  color: white;
+  padding: 20px 40px; }
+
+.link__wide {
+  padding-left: 75px;
+  padding-right: 75px; }
+
+/* Quote Styles */
+.quote__header {
+  color: white;
+  position: relative;
+  margin: auto auto auto 8%;
+  padding-top: 150px; }
+
+.quote__cite {
+  margin-left: 8%;
+  margin-bottom: 40px;
+  margin-top: 17px;
+  font-size: 22px;
+  font-weight: 100;
+  font-style: oblique;
+  color: white; }
+
+.quote__button {
+  margin-left: 8%; }
+
+.quote__icon-start {
+  position: absolute;
+  top: 62%;
+  margin-left: -3%; }
+
+.quote__icon-end {
+  padding-left: 37%;
+  margin-top: -4%; }
+
+/* Input Styles */
+/* https://stackoverflow.com/questions/3923904/preventing-form-resubmission */
+.input__form {
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 20%;
+  margin: 20px; }
+  .input__form-font {
+    font-family: "Franklin Gothic Medium";
+    font-size: 12px;
+    height: 20px;
+    color: #434343;
+    text-transform: uppercase;
+    letter-spacing: 2.5px; }
+  .input__form-slim1 {
+    width: 9.5%;
+    margin-right: 3px;
+    margin-left: 21px; }
+  .input__form-slim2 {
+    width: 9.5%;
+    /* margin-right: 3px; */
+    margin-left: 7px; }
+  .input__form-textarea {
+    font-size: 100%;
+    height: 80px;
+    width: 98%;
+    padding-bottom: 0.4em;
+    padding-right: 0.4em;
+    border: 1px solid #434343; }
+  .input__form-comments-chunk {
+    text-align: left;
+    margin: auto;
+    width: 44%;
+    padding-top: 25px;
+    margin-top: 20px;
+    margin-bottom: 70px; }
+
+.input__mobile {
+  margin: 0;
+  width: 40%; }
+
+/* Image styles */
+.image__main {
+  width: 100%; }
+
+.image__curve {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 43px;
+  margin-bottom: 0; }
+
+/* Table Styles */
+.table__contact {
+  width: 1100px;
+  margin: auto;
+  padding-top: 75px;
+  padding-bottom: 60px;
+  padding-left: 100px; }
+
+/* Header Styles */
+.heading__logo {
+  margin-left: 110px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  max-width: 100%; }
+
+.heading__h1 {
+  font-size: 44.21px;
+  font-weight: 300; }
+
+.heading__h2 {
+  margin-top: 50px;
+  font-size: 40px;
+  font-weight: 400; }
+
+.heading__h4 {
+  font: helvetica;
+  font-size: 28px;
+  color: #8cc3d2 !important;
+  letter-spacing: 2px; }
+
+/* Main+Body Styles */
+.spacing__none {
+  margin: 0; }
+
+.spacing__left-space {
+  margin-left: 100px;
+  /* padding-left: 100px; */ }
+
+.spacing__min-width {
+  min-width: 450px; }
+
+.spacing__max-width {
+  max-width: 1366px; }
+
+.spacing__quarter-wide {
+  width: 25%; }
+
+.spacing__linebreak {
+  border: none;
+  width: 40%;
+  border-top: thin dashed;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.spacing__gap-padding-top {
+  padding-top: 100px; }
+
+.spacing__gap-padding-bottom {
+  padding-bottom: 100px; }
+  .spacing__gap-padding-bottom-smaller {
+    padding-bottom: 50px; }
+
+.spacing__gap-padding-uneven {
+  padding-top: 50px;
+  padding-bottom: 40px; }
+
+.spacing__gap-margin-top {
+  margin-top: 100px; }
+
+.spacing__gap-margin-bottom {
+  margin-bottom: 100px; }
+
+.spacing__float-left, .quote__icon-end {
+  float: left;
+  padding-right: 20px; }
+
+.spacing__float-right {
+  float: right; }
+
+.spacing__float-clear {
+  clear: both; }
+
+.text__medium-size {
+  font-size: 20px; }
+
+.text__center {
+  text-align: center; }
+
+.text__thick, .input__form-font {
+  font-weight: 600; }
+
+.text__left-white {
+  text-align: left;
+  color: white;
+  font-size: 13; }
+
+/* Footer Styles */
+.footer-fineprint {
+  text-align: center;
+  color: grey;
+  background: black;
+  padding-bottom: 30px; }
+
+.marker, .marker__1, .marker__2, .marker__3 {
+  position: absolute;
+  margin-top: 450px;
+  margin-left: 49.3%;
+  z-index: 999; }
+  .marker__1 {
+    -ms-transform: translateX(-40px);
+        transform: translateX(-40px); }
+  .marker__3 {
+    -ms-transform: translateX(40px);
+        transform: translateX(40px); }
+
+#slider {
+  position: relative;
+  width: 100%;
+  max-width: 1366px;
+  height: 556px;
+  overflow: hidden; }
+  #slider ul {
+    position: relative;
+    list-style: none;
+    height: 100%;
+    width: 9999%;
+    padding: 0;
+    margin: 0;
+    transition: all 750ms ease;
+    left: 0; }
+    #slider ul li {
+      position: relative;
+      height: 100%;
+      width: calc(100vw);
+      float: left; }
+      #slider ul li img {
+        width: 100%;
+        height: 100%; }
+  #slider #next,
+  #slider #prev {
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    transition: all 150ms ease;
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="3" /><feOffset dx="6" dy="4" result="offsetblur" /><feFlood flood-color="rgba(34,34,34,1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+    filter: drop-shadow(5px 3px 3px #222222); }
+  #slider #prev {
+    left: 15px; }
+  #slider #next {
+    right: 15px; }
+
+/*# sourceMappingURL=styles.css.map */

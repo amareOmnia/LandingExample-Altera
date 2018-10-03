@@ -1,0 +1,43 @@
+* {
+  font-family: "Raleway" !important;
+  font-weight: 200;
+  margin: auto;
+  // background-color: grey;
+  /* serious problems with resizing browser and keeping absolute positions correct */
+  /* https://stackoverflow.com/questions/107936/how-to-add-some-non-standard-font-to-a-website#107951 */
+}
+@import "fonts";
+
+.spacing {
+  &__none {
+    margin: 0;
+  }
+
+  &__max-width {
+    max-width: 1366px;
+  }
+
+  &__linebreak {
+    border: none;
+    width: 40%;
+    max-width: 523px;
+    border-top: thin dashed;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__gap {
+    &-padding-top {
+      padding-top: 100px;
+    }
+  }
+
+  &__float-left {
+    float: left;
+    padding-right: 20px;
+  }
+
+  &__float-clear {
+    clear: both;
+  }
+}

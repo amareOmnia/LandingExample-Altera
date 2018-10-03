@@ -1,0 +1,39 @@
+.footer {
+  text-align: center;
+  color: grey;
+  background: black;
+  padding-bottom: 30px;
+
+  &__fineprint {
+    @media (max-width: 515px){
+      max-width: 362px;
+    }
+  }
+
+  &__container {
+    padding: 0 10%;
+    @media (min-width: 750px) {
+      display: flex;
+      max-width: 980px;
+      justify-content: space-between;
+    }
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  &__box {
+    @media (max-width: 750px) {
+      max-width: 312px;
+      padding-bottom: 35px;
+    }
+    min-width: 60%;
+    flex-basis: 20%;
+  }
+
+  &__text-flex {
+    @media (max-width: 805px) {
+      max-width: 412px;
+      // text-align: left;
+    }
+  }
+}

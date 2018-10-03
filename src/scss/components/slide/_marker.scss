@@ -1,0 +1,20 @@
+.marker {
+  position: absolute;
+  margin-top: 450px;
+  margin-left: 49.3%;
+  z-index: 999;
+
+  &__1 {
+    @extend .marker;
+    transform: translateX(-40px);
+  }
+
+  &__2 {
+    @extend .marker;
+  }
+
+  &__3 {
+    @extend .marker;
+    transform: translateX(40px);
+  }
+}
