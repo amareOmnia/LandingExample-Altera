@@ -1,0 +1,18 @@
+<div id="slider">
+  <img src="/_assets/images/markerOn.png" alt="Slide 1" id="marker1" class="marker__1">
+  <img src="/_assets/images/markerOn.png" alt="Slide 2" id="marker2" class="marker__2">
+  <img src="/_assets/images/markerOn.png" alt="Slide 3" id="marker3" class="marker__3">
+  
+  <ul id="slideWrap">
+    <perch:repeater id="slides" label="Slides">
+    <li id="slide" class="background__slide1" style="background-image: url('<perch:content type="image" id="slide_image" required label="Slide Image"/>')">
+      <h1 class="heading__h1 quote__header"><perch:content id="slide_title" type="text" label="Slide Title" html="true" required></h1>
+      <h3 class="quote__cite"><perch:content id="slide_quote" type="text" label="Slide Quote" html="true" required></h3>
+      <a href="<perch:content id="slide_link_url" type="text" label="Slide Link Url" html="true" required title>" class="link__camo link__button quote__button"><perch:content id="slide_link_text" type="text" label="Slide Link Text" html="true" required title></a> <br>
+    </li>
+    </perch:repeater>
+  </ul>
+  <a id="prev" href="#"> <img src="/_assets/images/prev.png" alt="previous"> </a>
+  <a id="next" href="#"> <img src="/_assets/images/next.png" alt="next"> </a>
+  <img src="_assets/images/newCurve.png" alt="curved divider" class="image__curve">
+</div>

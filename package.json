@@ -4,7 +4,7 @@
   "description": "State Bank Website",
   "repository": {
     "type": "git",
-    "url": "https://github.com/amareOmnia/LandingExample-Altera.git"
+    "url": "https://github.com/themorrisonagency/state-bank.git"
   },
   "author": "Morrison Agency",
   "scripts": {
@@ -12,11 +12,6 @@
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",
-    "eslint": "^5.6.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-concat": "^2.6.1",

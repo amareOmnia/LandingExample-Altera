@@ -19,7 +19,7 @@ var plumber = require("gulp-plumber");
 gulp.task("serve", ["process_sass"], function() {
   browserSync.init({
     browser: "google chrome",
-    proxy: "altera.local:8888",
+    proxy: "localhost:8888",
     port: 8080,
     open: true,
     notify: true
@@ -33,7 +33,7 @@ gulp.task("serve", ["process_sass"], function() {
 
 gulp.task("process_sass", function() {
   return gulp
-    .src("src/scss/main.scss")
+    .src("src/scss/styles.scss")
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(sass({importer: moduleImporter()}))

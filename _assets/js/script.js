@@ -1,136 +1,134 @@
-const responsiveSlider = function () {
-  const slider = document.getElementById('slider');
-  let sliderWidth = document.getElementById('slide').offsetWidth;
-  const slideList = document.getElementById('slideWrap');
+var responsiveSlider = function() {
 
-  let count = 1;
-  const items = slideList.querySelectorAll('li').length;
-  const prev = document.getElementById('prev');
-  const next = document.getElementById('next');
+  var slider = document.getElementById("slider");
+  var sliderWidth = document.getElementById("slide").offsetWidth;
+  var slideList = document.getElementById("slideWrap");
 
-  let currentMarker = 1;
-  const marker = [];
-  let markerExists = true;
+  var count = 1;
+  var items = slideList.querySelectorAll("li").length;
+  var prev = document.getElementById("prev");
+  var next = document.getElementById("next");
 
-  // defines markers until no more exist
-  for (i = 1; markerExists; ++i) {
-    console.log(`marker${i} check`);
-    marker[i] = document.getElementById(`marker${i}`);
-    if (marker[i] == null) {
-      var slideTotal = i - 1;
-      markerExists = false;
-      console.log(`no more markers.. total= ${slideTotal}`);
-    }
-  }
-  markerInit();
+  // marker variables
+  var marker1 = document.getElementById("marker1");
+  var marker2 = document.getElementById("marker2");
+  var marker3 = document.getElementById("marker3");
+  marker2.style.opacity = ".4";
+  marker3.style.opacity = ".4";
+  var currentMarker = 1;
 
 
-  function markerInit() {
-    for (i = slideTotal; i > 0; --i) {
-      if (i > 1) {
-        marker[i].style.opacity = '.4';
-        continue;
-      }
-      marker[1].style.opacity = '1';
-    }
-    currentMarker = 1;
-    console.log('markers initialized');
-  }
-
-  window.addEventListener('resize', () => {
-    const pageWidth = window.innerWidth;
-    sliderWidth = document.getElementById('slide').offsetWidth;
-    if (pageWidth <= 1366) {
+  window.addEventListener('resize', function() {
+    var pageWidth = window.innerWidth
+    sliderWidth = document.getElementById("slide").offsetWidth;
+    // console.log("Window: " + window.innerWidth + "pixels");
+    if (pageWidth < 1366) {
       lowerMarkers(1366 - pageWidth);
     }
     resize(sliderWidth);
   });
 
-  var resize = function (width) {
+  var resize = function(width) {
     // takes command and adjusts all slide widths
     slideList.style.width = width;
     // resets to first slide, to avoid poor margins before next button is clicked
-    slideList.style.left = '0px';
+    slideList.style.left = "0px";
     count = 1;
+    //resets marker selection
+    marker1.style.opacity = "1";
+    marker2.style.opacity = ".4";
+    marker3.style.opacity = ".4";
+    currentMarker = 1;
+  }
 
-    markerInit();
-  };
-
-  var lowerMarkers = function (difference) {
-    console.log('markers adjusting...');
-    for (i = 1; i <= slideTotal; ++i) {
-      marker[i].style.marginTop = `${450 + difference * 0.05}px`;
+  var lowerMarkers = function(difference) {
+    console.log("markers adjusting...");
+    marker1.style.marginTop = 450 + difference * .05 + "px";
+    marker2.style.marginTop = 450 + difference * .05 + "px";
+    marker3.style.marginTop = 450 + difference * .05 + "px";
+    if (window.innerWidth >= 1366) {
+      resetMarkers();
     }
-  };
+  }
 
-  const nextMarker = function () {
+  var resetMarkers = function() {
+    marker1.style.marginTop = "450px";
+    marker2.style.marginTop = "450px";
+    marker3.style.marginTop = "450px";
+  }
+
+  var nextMarker = function() {
     if (currentMarker > 1) {
       if (currentMarker > 2) {
-        slideShift(3, 1);
+        marker3.style.opacity = ".4";
+        marker1.style.opacity = "1";
+        currentMarker = 1;
         return;
       }
-      slideShift(2, 3);
+      marker2.style.opacity = ".4";
+      marker3.style.opacity = "1";
+      currentMarker = 3;
       return;
     }
-    marker1.style.opacity = '.4';
-    marker2.style.opacity = '1';
+    marker1.style.opacity = ".4";
+    marker2.style.opacity = "1";
     currentMarker = 2;
-  };
+  }
 
-  var slideShift = function (fade, focus) {
-    marker[fade].style.opacity = '.4';
-    marker[focus].style.opacity = '1';
-    currentMarker = focus;
-  };
-
-  const prevMarker = function () {
+  var prevMarker = function() {
     if (currentMarker > 1) {
       if (currentMarker > 2) {
-        slideShift(3, 2);
+        marker3.style.opacity = ".4";
+        marker2.style.opacity = "1";
+        currentMarker = 2;
         return;
       }
-      slideShift(2, 1);
+      marker2.style.opacity = ".4";
+      marker1.style.opacity = "1";
+      currentMarker = 1;
       return;
     }
-    slideShift(1, 3);
-  };
+    marker1.style.opacity = ".4";
+    marker3.style.opacity = "1";
+    currentMarker = 3;
+  }
 
-
-  const prevSlide = function () {
+  var prevSlide = function() {
     if (count > 1) {
       prevMarker();
-      count -= 2;
-      slideList.style.left = `-${count * sliderWidth}px`;
+      count = count - 2;
+      slideList.style.left = "-" + count * sliderWidth + "px";
       count++;
     } else if (count = 1) {
       prevMarker();
       count = items - 1;
-      slideList.style.left = `-${count * sliderWidth}px`;
+      slideList.style.left = "-" + count * sliderWidth + "px";
       count++;
     }
   };
 
-  const nextSlide = function () {
+  var nextSlide = function() {
     if (count < items) {
       nextMarker();
-      slideList.style.left = `-${count * sliderWidth}px`;
+      slideList.style.left = "-" + count * sliderWidth + "px";
       count++;
     } else if (count = items) {
       nextMarker();
-      slideList.style.left = '0px';
+      slideList.style.left = "0px";
       count = 1;
     }
   };
 
-  next.addEventListener('click', () => {
+  next.addEventListener("click", function() {
     nextSlide();
   });
 
-  prev.addEventListener('click', () => {
+  prev.addEventListener("click", function() {
     prevSlide();
   });
+
 };
 
-window.onload = function () {
+window.onload = function() {
   responsiveSlider();
-};
+}

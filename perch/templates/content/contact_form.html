@@ -1,0 +1,15 @@
+<perch:form id="contact_form" method="post" app="perch_forms">
+  <perch:input type="text" placeholder="first name" id="firstName" label="First Name" class="input__form input__form-font" required>
+  <perch:input type="text" placeholder="last name" id="lastName" label="Last Name" class="input__form input__form-font" required>
+  <br>
+  <perch:input type="text" placeholder="email address" id="email" label="Email" class="input__form input__form-font" required>
+  <perch:input type="text" placeholder="phone" id="phone" label="Phone Number" class="input__form input__form-font input__form-slim1" required>
+  <perch:input type="text" placeholder="zip code" id="zip" label="Zip Code" class="input__form input__form-font input__form-slim2" required>
+  <br>
+  <div class="input__form-comments-chunk">
+    <p class="input__form-font">comments</p>
+    <perch:input type="textarea" value="" id="comments" label="Comments" class="input__form-textarea">
+  </div>
+  <br>
+  <perch:input type="submit" id="submit" value="get in touch" class="link__button link__wide">
+</perch:form>

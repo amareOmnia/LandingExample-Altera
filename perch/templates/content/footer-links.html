@@ -1,0 +1,9 @@
+<div class="table__flex-footer">
+  <perch:repeater id="services" label="services">
+    <div class="spacing__min-width">
+      <img src="<perch:content type="image" id="footer_image" required label="Service Image"/>" class="spacing__float-left" alt="<perch:content type="text" id="footer-alt" required label="ADA Alt Label">">
+      <p class="spacing__none text__left-white"><a href="<perch:content id="footer_link_url" type="text" label="Footer Link Url" html="true" required title>" class="link__camo"><perch:content type="text" id="footer-subtitle" required label="Subtitle"></a></p>
+      <h4 class="heading__h4 spacing__none text__left-white text__thick"><perch:content type="text" id="footer-header" html="true" required label="Header"></h4>
+    </div>
+  </perch:repeater>
+</div>

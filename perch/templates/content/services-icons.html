@@ -1,0 +1,32 @@
+<section class="spacing__gap-padding-bottom">
+          <div class="table__flex">
+            <perch:repeater id="services" label="services">
+              <div class="table__item">
+                <img src="<perch:content type="image" id="service_image" required label="Service Image"/>" alt="<perch:content id="service_title" type="text" label="Service Title" html="true" required>">
+                <p class="text__thick"><perch:content id="service_title" type="text" label="Service Title" html="true" required></p>
+              </div>
+            </perch:repeater>  
+          </div>
+            <br> <br>
+          </section>
+          <a href="<perch:content id="service_link_url" 
+                    type="text" 
+                    label="Service Link Url" 
+                    html="true" required title>" 
+                    class="link__camo link__button link__wide">
+            <perch:content id="services_link" 
+                            type="text" 
+                            label="Link Title" 
+                            html="true" 
+                            required>
+          </a>
+          <div class=" spacing__gap-padding-top">
+            <small class="">
+              <perch:content id="services_fineprint" 
+                             type="text" 
+                             label="Fineprint" 
+                             html="true" 
+                             required>
+            </small>
+            </div>
+            

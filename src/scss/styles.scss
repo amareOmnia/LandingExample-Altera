@@ -1,0 +1,426 @@
+/* Global+Page Styles */
+* {
+  font-family: "Raleway" !important;
+  font-weight: 200;
+  margin: auto;
+  /* background-color: grey; */
+  /* serious problems with resizing browser and keeping absolute positions correct */
+  /* https://stackoverflow.com/questions/107936/how-to-add-some-non-standard-font-to-a-website#107951 */
+}
+@font-face {
+  font-family: "Raleway" !important;
+  src: url("/_assets/fonts/Raleway-Regular.ttf") format("truetype");
+}
+/* font-face is not actually doing anything here */
+.background {
+  &__blue {
+    background-color: #eaf7fb;
+    background-size: cover;
+    // max-width: auto;
+    width: 100%;
+  }
+
+  &__img {
+    background: url("/assets/images/male.jpg");
+    background-size: cover;
+    position: relative;
+    padding-bottom: 200px;
+    max-width: 1366px;
+    width: 100%;
+  }
+  // each slide image goes here
+  &__slide1 {
+    background: url("/_assets/images/male.jpg");
+    background-position: center;
+    max-width: 1366px;
+  }
+
+  &__slide2 {
+    background: url("https://picsum.photos/1366/556");
+    background-position: center;
+    max-width: 1366px;
+  }
+
+  &__slide3 {
+    background: url("https://picsum.photos/1366/556");
+    background-position: center;
+    max-width: 1366px;
+  }
+}
+/* can't figure out how to center the page when there's absolute positioning (text on images).
+      any attempt fucks formatting when reducing width of browser...*/
+/* Link Styles */
+.link {
+  &__camo {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__button {
+    background-color: #d16319;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1.2px;
+    color: white;
+    padding: 20px 40px;
+  }
+
+  &__wide {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+/* Quote Styles */
+.quote {
+  &__header {
+    color: white;
+    position: relative;
+    // top: 200px;
+    margin: auto auto auto 8%;
+    // width: 100%;
+    padding-top: 150px;
+  }
+
+  &__cite {
+    // position: absolute;
+    // top: 337px;
+    margin-left: 8%;
+    margin-bottom: 40px;
+    margin-top: 17px;
+    font-size: 22px;
+    font-weight: 100;
+    font-style: oblique;
+    color: white;
+  }
+
+  &__button {
+    // position: absolute;
+    // top: 410px;
+    margin-left: 8%;
+  }
+
+  &__icon-start {
+    position: absolute;
+    top: 62%;
+    margin-left: -3%;
+  }
+
+  &__icon-end {
+    @extend .spacing__float-left;
+    // position: absolute;
+    // top: 80%;
+    padding-left: 37%;
+    margin-top: -4%;
+  }
+}
+/* Input Styles */
+/* https://stackoverflow.com/questions/3923904/preventing-form-resubmission */
+.input {
+  &__form {
+    border: none;
+    border-bottom: 1px solid grey;
+    width: 20%;
+    margin: 20px;
+
+    &-font {
+      @extend .text__thick;
+      font-family: "Franklin Gothic Medium";
+      font-size: 12px;
+      height: 20px;
+      color: #434343;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+    }
+
+    &-slim1 {
+      width: 9.5%;
+      margin-right: 3px;
+      margin-left: 21px;
+    }
+
+    &-slim2 {
+      width: 9.5%;
+      /* margin-right: 3px; */
+      margin-left: 7px;
+    }
+
+    &-textarea {
+      // @extend .input__form-comments-chunk
+      font-size: 100%;
+      height: 80px;
+      width: 98%;
+      // margin-bottom: 60px;
+      // padding-left: 0;
+      padding-bottom: 0.4em;
+      padding-right: 0.4em;
+      border: 1px solid #434343;
+    }
+
+    &-comments-chunk {
+      text-align: left;
+      margin: auto;
+      width: 44%;
+      padding-top: 25px;
+      margin-top: 20px;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__mobile {
+    margin: 0;
+    width: 40%;
+  }
+}
+/* Image styles */
+.image {
+  &__main {
+    // position: relative;
+    width: 100%;
+  }
+
+  &__curve {
+    position: absolute;
+    bottom: 0;
+    // top: 657px;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 43px;
+    margin-bottom: 0;
+  }
+}
+/* Table Styles */
+.table {
+  &__contact {
+    width: 1100px;
+    margin: auto;
+    padding-top: 75px;
+    padding-bottom: 60px;
+    padding-left: 100px;
+  }
+  &__flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  &__flex-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-left: 200px;
+    // padding-right: 100px;
+  }
+  &__item {
+    margin: 50px !important;
+  }
+}
+
+/* Header Styles */
+.heading {
+  &__logo {
+    margin-left: 110px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    max-width: 100%;
+  }
+
+  &__h1 {
+    font-size: 44.21px;
+    font-weight: 300;
+  }
+
+  &__h2 {
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  &__h4 {
+    font: helvetica;
+    font-size: 28px;
+    color: #8cc3d2 !important;
+    letter-spacing: 2px;
+  }
+}
+/* Main+Body Styles */
+.spacing {
+  &__none {
+    margin: 0;
+  }
+
+  &__left-space {
+    margin-left: 100px;
+    /* padding-left: 100px; */
+  }
+
+  &__min-width {
+    min-width: 450px;
+  }
+
+  &__max-width {
+    max-width: 1366px;
+  }
+
+  &__quarter-wide {
+    width: 25%;
+  }
+
+  &__linebreak {
+    border: none;
+    width: 40%;
+    border-top: thin dashed;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__gap {
+    &-padding-top {
+      padding-top: 100px;
+    }
+
+    &-padding-bottom {
+      padding-bottom: 100px;
+
+      &-smaller {
+        padding-bottom: 50px;
+      }
+    }
+
+    &-padding-uneven {
+      padding-top: 50px;
+      padding-bottom: 40px;
+    }
+
+    &-margin-top {
+      margin-top: 100px;
+    }
+
+    &-margin-bottom {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__float {
+    &-left {
+      float: left;
+      padding-right: 20px;
+    }
+
+    &-right {
+      float: right;
+    }
+
+    &-clear {
+      clear: both;
+    }
+  }
+}
+
+.text {
+  &__medium-size {
+    font-size: 20px;
+  }
+
+  &__center {
+    text-align: center;
+  }
+
+  &__thick {
+    font-weight: 600;
+  }
+
+  &__left-white {
+    text-align: left;
+    color: white;
+    font-size: 13;
+  }
+}
+/* Footer Styles */
+.footer {
+  &-fineprint {
+    text-align: center;
+    color: grey;
+    background: black;
+    padding-bottom: 30px;
+  }
+}
+
+.marker {
+  position: absolute;
+  margin-top: 450px;
+  // margin-top: 10rem;
+  margin-left: 49.3%;
+  z-index: 999;
+
+  &__1 {
+    @extend .marker;
+    transform: translateX(-40px);
+  }
+
+  &__2 {
+    // opacity: .4;
+    @extend .marker;
+  }
+
+  &__3 {
+    // opacity: .4;
+    @extend .marker;
+    transform: translateX(40px);
+  }
+}
+//  Slider boi
+#slider {
+  position: relative;
+  width: 100%;
+  max-width: 1366px;
+  height: 556px;
+  overflow: hidden;
+
+  ul {
+    position: relative;
+    list-style: none;
+    height: 100%;
+    width: 9999%;
+    padding: 0;
+    margin: 0;
+    transition: all 750ms ease;
+    left: 0;
+
+    li {
+      position: relative;
+      height: 100%;
+      width: calc(100vw);
+      float: left;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  #next,
+  #prev {
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 150ms ease;
+    -webkit-filter: drop-shadow(5px 3px 3px #222222);
+    filter: drop-shadow(5px 3px 3px #222222);
+  }
+
+  #prev {
+    left: 15px;
+  }
+
+  #next {
+    right: 15px;
+  }
+}
